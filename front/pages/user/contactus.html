@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContactUs</title>
+  <link rel="stylesheet" href="/front/styles/css/dashboards.css" />
+  <link rel="stylesheet" href="/front/styles/css/styles.css" />
+  <script src="/scripts/kitfontaweson.js"></script>
+</head>
+<!-- The main content is here-->
+
+<body>
+  <header class="header show_desktop d-none">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-6 col-lg-5 col-md-12">
+          <a class="logo" href="landing">Enhanced Academic Experience</a>
+        </div>
+        <div class="col-6 col-xl-2 col-lg-4 col-md-6">
+          <a href="contactus" class="contact-list">Contact Us</a>
+        </div>
+        <div class="col-6 col-xl-4 col-lg-3 col-md-6">
+          <div class="row">
+            <div class="col-6 col-xl-3 col-lg-6 col-md-4">
+              <a href="login"><button class="login-button">Login</button></a>
+            </div>
+            <div class="col-6 col-xl-9 col-lg-6 col-md-8">
+              <a href="signup"><button class="signup-button">Signup</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar for mobile Start -->
+  <header class="show_medium d-none">
+    <div class="row">
+      <div class="col-12 col-md-9 text-center pt-2">
+        <a class="logo" href="landing">Enhanced Academic Experience</a>
+      </div>
+      <div class="col-12 col-md-auto text-end">
+        <div class="dropdown pe-5 me-2 pt-2">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a class="dropdown-item" href="contactus">Contact Us</a>
+            </li>
+            <li><a class="dropdown-item" href="login">Login</a></li>
+            <li><a class="dropdown-item" href="signup">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- mobile End -->
+  <div class="contact-container" style="margin-top: 14%">
+    <h1 class="contact-title">Contact Us</h1>
+    <form action="#" class="signup-form">
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Name" required />
+      <input type="text" placeholder="Subject" required />
+      <textarea class="contact-message" rows="7" placeholder="Your message"></textarea>
+    </form>
+
+    <button class="signup-button contact-page">Send Message</button>
+  </div>
+  <script src="/scripts/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

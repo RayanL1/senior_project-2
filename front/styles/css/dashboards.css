@@ -1,0 +1,2295 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+/*  _____________The sidebar styling _____________ */
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 110px;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: linear-gradient(to right, #0d2238, #007bb5);
+}
+
+.sidebar:hover {
+  width: 240px;
+  transition: 0.5s;
+}
+
+.show_medium {
+  display: none;
+}
+
+.logo {
+  height: 80px;
+  padding: 1rem;
+}
+
+.main {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.main li {
+  padding: 1rem;
+  margin: 8px 0;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.main li:hover,
+.choosen {
+  background: #e0e0e058;
+  transition: all 0.3 ease;
+}
+
+.main a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main a span {
+  overflow: hidden;
+}
+
+.main a i {
+  font-size: 1.2rem;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* .class-buttons{
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+/*  _____________The main content styling _____________ */
+
+.main-content {
+  position: relative;
+  background: #ebe9e9;
+  width: 100%;
+  padding: 1rem;
+}
+
+.header-container img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-out;
+}
+
+.header-container:hover {
+  padding: 1rem 3rem;
+  transition: all 0.3s ease-out;
+}
+
+.header-title {
+  color: #87ceeb;
+  text-shadow: 2px 2px 2px #001f3f;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.search-box {
+  background: rgb(237, 237, 237);
+  border-radius: 0.9rem;
+  color: rgba(113, 99, 186, 1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.search-box input {
+  background: transparent;
+  padding: 0.4rem;
+  width: 100%;
+}
+
+.search-box i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.search-box i:hover {
+  transform: scale(1.12);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  /* Adjust this value based on your spacing needs */
+}
+
+.group-title {
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  right: 0;
+  top: 0;
+  padding: 20px;
+}
+
+.user-info img {
+  width: 50px;
+  /* Adjust the size as needed */
+  height: 50px;
+  /* Adjust the size as needed */
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.welcome-message p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  /* Added padding */
+  background-color: rgba(52, 152, 219, 0.1);
+  /* Light blue background */
+  border-radius: 20px;
+  /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+.welcome-message p span {
+  color: #3498db;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  /* Text shadow for the name */
+}
+
+/* _____________card container _____________  */
+
+.card-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.7rem 0.7rem 0  0 ;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main-title {
+  color: rgba(113, 99, 186, 1);
+  padding: 0.7rem;
+  font-size: 0.9rem;
+}
+
+.card {
+  background: rgb(229, 223, 223);
+  border-radius: 0.7rem;
+  /* padding: 1.2rem; */
+  max-width: 500px;
+  max-height: 500px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  /* transition: all 0.5s ease-in-out; */
+}
+
+.bargraph:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.amount {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+.amount-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.graph-icon {
+  color: white;
+  padding: 1rem;
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: grey;
+}
+
+.card-details {
+  font-size: 1.2rem;
+  color: #777777;
+  letter-spacing: 2px;
+}
+
+/* _____________The Group List_____________ */
+
+.filter-buttons button {
+  padding: 10px 25px;
+  margin: 10px 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+}
+
+/* Button 1 - Much Brighter Shade */
+.filter-buttons button:nth-child(1) {
+  background-color: #144472;
+  /* Much brighter */
+  color: white;
+}
+
+/* Button 2 - Lighter shade of the gradient end (kept as is) */
+.filter-buttons button:nth-child(2) {
+  background-color: #005a8e;
+  /* Lighter than #007bb5 */
+  color: white;
+}
+
+/* Button 3 - Gradient background (kept as is) */
+.filter-buttons button:nth-child(3) {
+  background-image: linear-gradient(to right, #0d2238, #007bb5);
+  color: white;
+}
+
+/* Button 4 - Dotted border with a much brighter background */
+.filter-buttons button:nth-child(4) {
+  background-color: #2c5a8e;
+  /* Much brighter */
+  color: white;
+  border: 2px dotted #00a1d9;
+  /* Brighter border */
+}
+
+/* Adding hover effects */
+.filter-buttons button:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the button */
+}
+
+.your-group-title {
+  color: #1abc9c;
+  /* A different shade of blue */
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  /* Added padding */
+  border-bottom: 4px solid #3498db;
+  /* Solid border at the bottom */
+}
+
+.group-title {
+  color: #2c3e50;
+  /* Dark Slate Grey color */
+  font-size: 28px;
+  /* Slightly bigger font size */
+  font-weight: bold;
+  /* Bold font weight for prominence */
+  margin-bottom: 20px;
+  /* Margin at the bottom for spacing */
+  text-align: left;
+  /* Align text to the left */
+  padding-bottom: 10px;
+  /* Padding at the bottom */
+  border-bottom: 2px solid #bdc3c7;
+  /* A light grey border at the bottom */
+}
+
+.your-group {
+  margin-bottom: 3rem;
+}
+
+.group-title {
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: rgba(113, 99, 186, 1);
+  color: white;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+}
+
+tbody {
+  background: #f2f2f2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+thead {
+  background: linear-gradient(to right, #b8d0e8, #62a2d0);
+  color: #0d2238;
+}
+
+th,
+.table-container td {
+  padding: 1rem;
+  text-align: center;
+}
+
+tbody {
+  background: #f2f2f2;
+}
+
+.table-container td {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background: #fff;
+}
+
+tfoot {
+  background: rgba(113, 99, 186, 1);
+  color: #fff;
+}
+
+tfoot td {
+  padding: 1rem;
+}
+
+/* .group-leader {
+  background-color: rgba(255, 223, 128, 1);
+  color: #000;
+} */
+.request-button {
+  background-color: #e94e77;
+  /* Pink-Red */
+  color: #ffffff;
+  /* White */
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.request-button:hover,
+.request-button:focus {
+  background-color: #d53756;
+  /* Darker Pink-Red */
+  transform: translateY(-2px);
+  /* Subtle lift */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.request-button:active {
+  transform: translateY(0);
+  /* Reset position */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.invite-button {
+  background-color: #4a90e2;
+  /* Blue */
+  color: #ffffff;
+  /* White */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.invite-button:hover,
+.invite-button:focus {
+  background-color: #4178b0;
+  /* Darker Blue */
+  transform: translateY(-2px);
+  /* Subtle lift */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.invite-button:active {
+  transform: translateY(0);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.group-container {
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.available-container {
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+/* _____________The Portfolio Builder_____________ */
+
+.upload-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #6990f2;
+}
+
+.wrapper {
+  background: white;
+  padding: 2rem;
+  width: 430px;
+  border-radius: 8px;
+}
+
+.wrapper header {
+  color: #6990f2;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper .upload-form {
+  height: 160px;
+  border-radius: 5px;
+  display: flex;
+  margin: 2rem 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px dashed #6990f2;
+  cursor: pointer;
+}
+
+.upload-form :where(i, p) {
+  color: #6990f2;
+}
+
+.upload-sign {
+  font-size: 4rem;
+}
+
+.upload-form p {
+  margin-top: 1rem;
+}
+
+.progress-area .row,
+.uploaded-area .row {
+  background: #e9f0ff;
+  margin-bottom: 0.7rem;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-area .row i,
+.uploaded-area .row i {
+  font-size: 1.9rem;
+  color: #6990f2;
+}
+
+.progress-area .details span,
+.uploaded-area .details span {
+  font-size: 1rem;
+}
+
+/* The upload projects and certificates styling start */
+
+/* The upload projects and certificates styling end*/
+
+/* The personal Information button pop up window  start*/
+
+/* Style the modal */
+/* .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  text-align: left;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: #888888;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #444444;
+} */
+
+/* h2 {
+  font-size: 2.2rem;
+  color: #333333;
+  margin-bottom: 20px;
+} */
+
+label {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.personal-information-input,.any-information-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #34495e;
+  margin: 0.5rem 0;
+}
+
+.personal-information-header {
+  font-size: 2.5rem;
+  /* Adjust the text size */
+  color: #333;
+  /* Dark text for a neutral appearance */
+  text-align: center;
+  /* Centered text */
+  background-color: #f2f2f2;
+  /* A light grey background */
+  padding: 20px;
+  /* Space around the text */
+  border-radius: 10px;
+  /* Gentle rounded corners */
+  margin-bottom: 30px;
+  /* Space below the header */
+  border-bottom: 5px solid #3498db;
+}
+
+input[type="submit"] {
+  background-color: #3498db;
+  /* Change this color to your preference */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #2980b9;
+  /* This color will be slightly darker than the original color */
+}
+
+/* The personal Information button pop up window  ends*/
+
+.buttons-container {
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+}
+
+.big-button {
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 5rem;
+
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.big-button:hover {
+  transform: scale(1.05);
+}
+
+.big-button.personal-data {
+  background-color: #1e4d70;
+  width: 100%;
+  height: 100%;
+}
+
+.big-button.upload-projects {
+  background-color: #1e4d70;
+  width: 100%;
+  height: 100%;
+}
+
+.big-button.upload-certificates {
+  background-color: #1e4d70;
+  width: 100%;
+  height: 100%;
+}
+
+.big-button.personal-data:hover,
+.big-button.upload-projects:hover,
+.big-button.upload-certificates:hover {
+  background-color: #ffa502;
+}
+
+/* _____________The Portfolio page_____________ */
+
+/* The portfolio header */
+
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 10%;
+  background-color: #f0f3f4;
+  /* New background color */
+}
+
+.content-text {
+  max-width: 500px;
+}
+
+.text-primary {
+  color: #3498db;
+  /* New color */
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  /* New color */
+  margin: 0.5rem 0 1rem;
+}
+
+.job-title,
+.major,
+.about,
+.email {
+  color: #34495e;
+  /* New color */
+  margin: 0.5rem 0;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+
+.email a {
+  color: #3498db;
+  /* New color */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.email a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  margin: 2rem 0;
+}
+
+.social-media a {
+  color: #34495e;
+  /* New color */
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #3498db;
+  /* New color */
+}
+
+.button-primary {
+  color: #fff;
+  background-color: #3498db;
+  /* New color */
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-primary:hover {
+  background-color: #2980b9;
+  /* New color */
+}
+
+.button-primary i {
+  margin-left: 0.5rem;
+}
+
+/* Styling for the header image */
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  /* Vertically center the items */
+  justify-content: center;
+  /* Horizontally center the items */
+  background-color: #f8f8f8;
+  /* Background color of the section */
+  padding: 50px;
+  position: relative;
+  /* Positioning context for pseudo-element */
+}
+
+.portfolio-header::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  /* Adjust the width as needed */
+  height: 70%;
+  /* Adjust the height as needed */
+  background-color: rgba(52, 152, 219, 0.1);
+  /* Light blue background */
+  z-index: -1;
+  /* Place it behind the content */
+  border-radius: 50%;
+  /* Making it oval */
+  left: 15%;
+  /* Adjust positioning as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  /* Centering vertically */
+}
+
+.portfolio-header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  /* White border to distinguish from the background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Adding shadow for depth */
+  z-index: 1;
+  /* Ensure it’s above the background shape */
+}
+
+.portfolio-header .content-text {
+  z-index: 1;
+  /* Ensure it’s above the background shape */
+  margin-right: 50px;
+  /* Space between text and image */
+  /* Other styles... */
+}
+
+/* The skills of the portfolio page */
+
+.skills,
+.portfolio {
+  padding: 6rem 0;
+}
+
+.skills h2,
+.container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #006494;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.skills h2::after,
+.container h2::after {
+  content: "";
+  /* An empty content */
+  display: block;
+  /* Make it a block element */
+  border-bottom: 2px solid black;
+  /* Add a bottom border to create the line */
+  width: 100%;
+  /* Make it span the full width of the h2 */
+  margin-top: 10px;
+  /* Add some space between the text and the line */
+}
+
+.skills .skills-content {
+  margin-top: 3rem;
+  background-color: #f8f8f8;
+  /* Light grey background */
+}
+
+/* .skills .skills-content .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+} */
+
+.skills .skills-content .item {
+  color: #333;
+  text-align: center;
+  /* Dark grey for text */
+  background-color: #e0e0e0;
+  /* Slightly darker grey for item background */
+  margin: 1.2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skills .row img {
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+.skills .skills-content .row .item:hover {
+  color: #fff;
+  /* White text on hover */
+  background-color: #3498db;
+  /* Bright blue as a highlight color on hover */
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skills .row img {
+  max-width: 40px;
+}
+
+/* The styles of the assessment results start here */
+
+.asess-input {
+  width: 100%;
+  /* Makes the input stretch to the full width of its container */
+  padding: 8px 10px;
+  /* Adds some padding inside the input */
+  margin: 5px 0;
+  /* Adds some space around the input */
+  display: inline-block;
+  /* Ensures the input is properly aligned */
+  border: 1px solid #ccc;
+  /* A light grey border */
+  border-radius: 4px;
+  /* Slightly rounded borders for a modern look */
+  box-sizing: border-box;
+  /* Makes sure padding doesn't affect overall width */
+  font-size: 16px;
+  /* Sets a comfortable font size for input */
+}
+
+.asess-input:focus {
+  outline: none;
+  /* Removes the default focus outline */
+  border-color: #665edd;
+  /* Adds a highlight color when the input is focused */
+  box-shadow: 0 0 5px rgba(102, 94, 221, 0.5);
+  /* Soft glow effect for focus */
+}
+
+.assessment-results {
+  padding: 6rem 0;
+  background-color: #f8f8f8;
+  margin-bottom: 6rem;
+}
+
+.assessment-results h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #3498db;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.assessment-results .results-content .item {
+  background-color: #fff;
+  color: #333;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.assessment-results .results-content .item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
+.assessment-results .results-content .item .bar {
+  background-color: #e0e0e0;
+  height: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.assessment-results .results-content .item .bar .percentage {
+  height: 100%;
+  line-height: 40px;
+  color: #fff;
+  background-color: #3498db;
+  text-align: center;
+  position: absolute;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.assessment-results .results-content .item:hover .bar .percentage {
+  background-color: #006494;
+}
+
+/* The styles of the assessment results ends here */
+
+/* portfolio section */
+
+/* Container to maintain content within a fixed width */
+
+/* Portfolio Section */
+/* Portfolio Section */
+.portfolio {
+  background-color: #f8f8f8;
+  /* Light grey to match the skills section */
+  padding: 2rem;
+}
+
+.portfolio h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  /* Darker Slate Gray to match the header */
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Individual Portfolio Items */
+.portfolio .row .item {
+  background-color: #ffffff;
+  /* White to create contrast */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  /* min-height: 450px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Hover Effect for Portfolio Items */
+.portfolio .row .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.portfolio .row .item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  /* height: auto; */
+}
+
+/* Content within each Portfolio Item */
+.portfolio .row .item .item-content {
+  padding: 20px;
+}
+
+.portfolio .row .item .item-content h3 {
+  font-size: 1.3rem;
+  color: #34495e;
+  /* Dark Slate Gray to match the header */
+  margin-bottom: 1rem;
+}
+
+.portfolio .row .item .item-content p {
+  font-size: 1rem;
+  color: #333333;
+  /* Dark grey for text */
+  margin-bottom: 1.5rem;
+}
+
+/* Link Styling within Portfolio Items */
+.portfolio .row .item .item-content a {
+  font-size: 0.9rem;
+  color: #3498db;
+  /* Keeping the blue for links */
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.portfolio .row .item .item-content a:hover {
+  color: #2c3e50;
+  /* Darker Slate Gray for hover effect */
+}
+
+/* Certification Section Styling */
+.portfolio-certification {
+  background-color: #f8f9fa;
+  padding: 4rem 2rem;
+}
+
+.portfolio-certification h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #343a40;
+  /* Dark Grey for Formal Appearance */
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+/* Individual Certification Items */
+.portfolio-certification .row .item {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  /* Light Border */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect for Certification Items */
+.portfolio-certification .row .item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.portfolio-certification .row .item img {
+  width: 100%;
+
+  height: auto;
+}
+
+/* Content within each Certification Item */
+.portfolio-certification .row .item .item-content {
+  padding: 2rem;
+}
+
+.portfolio-certification .row .item .item-content h3 {
+  font-size: 1.5rem;
+  color: #495057;
+  /* Darker Text */
+  margin-bottom: 1rem;
+}
+
+.portfolio-certification .row .item .item-content p {
+  font-size: 1rem;
+  color: #6c757d;
+  /* Grey Text for Description */
+  margin-bottom: 2rem;
+}
+
+/* Link Styling within Certification Items */
+.portfolio-certification .row .item .item-content a {
+  font-size: 1rem;
+  color: #007bff;
+  /* Blue for Links */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.portfolio-certification .row .item .item-content a:hover {
+  color: #0056b3;
+  /* Darker Blue on Hover */
+  text-decoration: underline;
+}
+
+/* You can add more specific styles or modifications as needed */
+
+.skills .skills-content .row .item:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  box-shadow: 10px 10px 10px #001f3f;
+}
+
+/* Courses page */
+
+#modal-invite {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+#modal-content-invite {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.invite-header {
+  background-color: #aad8ed;
+  /* Lighter blue shade for a softer appearance */
+  color: #2c3e50;
+  /* Navy color for a bold text appearance */
+  text-align: center;
+  /* Keeps the text at the center */
+  padding: 15px;
+  /* A little less padding for a sleek look */
+  margin-bottom: 30px;
+  /* Reduced margin at the bottom */
+  border-radius: 15px;
+  /* Slightly larger border radius for softer corners */
+  font-family: "Verdana", sans-serif;
+  /* Using a different font for variety */
+  font-size: 28px;
+  /* Slightly reduced font size */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Slightly increased shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.invite-header:hover {
+  transform: scale(1.03);
+  /* Slight scaling to give a pop effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  /* Darker shadow on hover */
+  cursor: pointer;
+  /* Indicates interactiveness */
+}
+
+.showInvites {
+  background-color: #3498db;
+  /* Strong blue background */
+  color: #ffffff;
+  /* White text color for contrast */
+  border: none;
+  /* No border to make it clean */
+  padding: 12px 25px;
+  /* Generous padding for clickability */
+  font-size: 18px;
+  /* Readable text size */
+  border-radius: 8px;
+  /* Rounded corners for a soft appearance */
+  cursor: pointer;
+  /* Cursor effect to indicate clickability */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Smooth transitions for interactions */
+}
+
+/* Hover effect to give feedback on interaction */
+.showInvites:hover {
+  background-color: #2c3e50;
+  /* Darker blue for hover state */
+  transform: scale(1.05);
+  /* Slight enlargement to indicate actionability */
+}
+
+/* Focus effect to maintain button interactivity for keyboard navigation */
+.showInvites:focus {
+  outline: none;
+  /* Removes default focus outline */
+  box-shadow: 0 0 8px rgba(0, 150, 255, 0.5);
+  /* Custom focus style with a glowing effect */
+}
+
+#close-invite {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close-invite:hover,
+#close-invite:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.invite-container {
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.invite-card {
+  background-color: #e8f4fa;
+  /* Updated card color */
+  border: 1px solid #b5d1e8;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Added transition */
+}
+
+/* Added hover effect */
+.invite-card:hover {
+  transform: scale(1.05);
+  /* Scale the card size */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  /* Add shadow */
+}
+
+.invite-card p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.actions {
+  text-align: right;
+}
+
+.details-btn,
+.accept-btn,
+.decline-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.details-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.accept-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.decline-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.buttons-container-courses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  /* Adjusted space between buttons */
+  margin-top: 20px;
+  /* Adjusted margin for better spacing */
+  margin-bottom: 20px;
+}
+
+.big-button.course-button {
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  /* Adjusted padding for a better look */
+  font-size: 1.5rem;
+  /* Adjusted font size for readability */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 60%;
+  /* Set a width for consistency */
+  text-align: center;
+  /* Center text inside the button */
+}
+
+.big-button.course-button:hover {
+  background-color: #ffa502;
+  transform: scale(1.05);
+}
+
+/* Different background colors for each button */
+.big-button.course-button:nth-child(1) {
+  background-color: #1e4d70;
+}
+
+.big-button.course-button:nth-child(2) {
+  background-color: #006494;
+}
+
+.big-button.course-button:nth-child(3) {
+  background-color: #003f5e;
+}
+
+.big-button.course-button:nth-child(4) {
+  background-color: #005f73;
+}
+
+.big-button.course-button:nth-child(5) {
+  background-color: #0d3b66;
+}
+
+.courses-title {
+  text-align: center;
+  color: #1e4d70;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  margin-bottom: 3rem;
+}
+
+/* The main admin page styling */
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  /* Space between each category */
+}
+
+.category h2 {
+  text-align: center;
+  color: #1e4d70;
+  font-size: 2.5rem;
+  /* Increased font size */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  /* Align buttons horizontally */
+  align-items: center;
+  gap: 20px;
+  /* Space between buttons */
+  flex-wrap: wrap;
+  /* Allow buttons to wrap to the next line */
+  justify-content: center;
+  /* Center buttons */
+}
+
+.custom-button {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  /* Adjusted padding */
+  font-size: 1rem;
+  /* Adjusted font size */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;
+  margin: 2px;
+  opacity: 0.3;
+}
+.custom-button.active{opacity: 1;}
+
+.custom-button:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Different background colors for each button */
+.custom-button:nth-of-type(1) {
+  background-color: #1e4d70;
+}
+
+.custom-button:nth-of-type(2) {
+  background-color: #006494;
+}
+
+.custom-button:nth-of-type(3) {
+  background-color: #003f5e;
+}
+
+.custom-button:nth-of-type(4) {
+  background-color: #005f73;
+}
+
+.custom-button:nth-of-type(5) {
+  background-color: #0d3b66;
+}
+
+/* The assess page */
+
+.table-header {
+  font-size: 36px;
+  /* Adjust the size as you prefer */
+  color: #2ec0f9;
+  /* Using one of the blue tones you provided */
+  text-align: center;
+  /* Center align the text */
+  margin-bottom: 20px;
+  /* Space below the header */
+  padding: 10px;
+  /* Space around the text */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  font-weight: bold;
+  /* Bold font weight */
+  letter-spacing: 1px;
+  /* Space between letters for a stylish look */
+}
+
+.card-container-asses {
+  max-width: 1000px;
+  width: 90%;
+  margin: 50px auto;
+
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  /* AliceBlue */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.your-group-title {
+  color: #3498db;
+  /* DodgerBlue */
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.selector-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.selector-label {
+  color: #3498db;
+  /* DodgerBlue */
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.student-selector {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  /* DodgerBlue */
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Table Styles */
+.assessment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.assessment-table th,
+.assessment-table td {
+  padding: 15px;
+  border: 1px solid #d1e8ff;
+  /* Lighter Blue */
+  text-align: left;
+  color: #3498db;
+  /* DodgerBlue */
+}
+
+.assessment-table th {
+  background-color: #e6f2ff;
+  /* Very Light Blue */
+  font-size: 18px;
+}
+
+/* Container Styles */
+.card-container-add-skill {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  /* AliceBlue */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.add-skill-title {
+  color: #3498db;
+  /* DodgerBlue */
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Button Styles */
+
+/* Table Styles */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 15px;
+  border: 1px solid #d1e8ff;
+  /* Lighter Blue */
+  text-align: left;
+  color: #3498db;
+  /* DodgerBlue */
+}
+
+.skills-table th {
+  background-color: #e6f2ff;
+  /* Very Light Blue */
+  font-size: 18px;
+}
+
+.skills-table tbody tr:hover {
+  background-color: #e6f2ff;
+  /* Very Light Blue */
+}
+
+/* The general styling of the modals */
+
+/* Style for the modal background */
+
+/* Style for the modal content */
+/* Style for the modal background */
+.modal,
+#create-group-modal,
+#personalInfoModal,
+#projectInfoModal,
+#certificatesInfoModal,
+#skills-modal,
+#assessment-modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Background with transparency */
+  z-index: 1;
+  /* Sit on top */
+}
+
+/* Style for the modal content */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 80%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the close button */
+.close,
+#create-group-close-modal,
+#close-personalinfo-modal,
+#close-any-modal,
+#close-certificates-modal,
+#skills-close-modal,
+#assessment-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #67aaf9;
+  cursor: pointer;
+}
+
+#assessment-skills {
+  height: auto;
+  min-height: 50px;
+  /* Adjust the height as needed */
+}
+
+.close:hover,
+#create-group-close-modal:hover,
+#close-personalinfo-modal:hover,
+#close-any-modal:hover,
+#close-certificates-modal:hover,
+#skills-close-modal:hover,
+#assessment-modal-close:hover {
+  color: #2ec0f9;
+}
+
+/* Style for the modal header */
+.modal-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+  background-color: #2ec0f9;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Style for the form labels and inputs */
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  color: #9bbdf9;
+}
+
+.modal-content input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 20px;
+  /* Space between inputs */
+  border: 1px solid #67aaf9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  /* Added padding and border to element's total width and height */
+}
+
+/* Style for the submit button */
+.modal-submit-button,
+#group-modal-submit,
+#skill-submit-button {
+  padding: 15px 30px;
+  background-color: #67aaf9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  /* Center the button */
+}
+
+.modal-submit-button:hover,
+#group-modal-submit:hover,
+#skill-submit-button:hover {
+  background-color: #9bbdf9;
+}
+
+/* Now here is the assessment modal styling */
+
+/* Button Styles */
+.asses-button {
+  padding: 15px 30px;
+  background-color: #3498db;
+  /* DodgerBlue */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.asses-button:hover {
+  background-color: #2e8ace;
+}
+
+.asses-button:active {
+  background-color: #2a7cb8;
+}
+
+/* The results table of the assessment */
+
+/* Container Styles */
+.results-container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  /* Slightly different shade for differentiation */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.results-table th,
+.results-table td {
+  padding: 15px;
+  border: 1px solid #d1e8ff;
+  /* Lighter Blue */
+  text-align: center;
+  color: #3498db;
+  /* DodgerBlue */
+}
+
+.results-table th {
+  background-color: #e6f2ff;
+  /* Very Light Blue */
+  font-size: 18px;
+}
+
+/* You might want to style the rows or columns differently, 
+   for example, you might want to add different background colors for zebra striping */
+.results-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+  /* Zebra Striping */
+}
+
+.result-header-table {
+  color: #3498db;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  padding-top: 20px;
+}
+
+/* The slider styling start */
+
+.slider-container {
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  background-color: #e0e0e0;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: -20px;
+  color: #333333;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  transition: opacity 0.2s;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+}
+
+.slider-labels span {
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 25px;
+  height: 25px;
+  background: #007bb5;
+  cursor: pointer;
+  appearance: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #007bb5;
+  cursor: pointer;
+}
+
+/* The slider styling fininsh */
+
+/* The student selector  */
+
+.selector-container {
+  /* display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+.selector-label {
+  font-size: 18px;
+  color: #3498db;
+  /* Adjusted blue tone */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  /* Increased margin-bottom for spacing */
+  padding-left: 10px;
+  /* Increased padding-left */
+  border-left: 4px solid #3498db;
+  /* Adjusted blue tone */
+}
+
+.student-selector {
+  width: 100%;
+  /* Make the selector take the full width of the container */
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  /* Adjusted blue tone and border thickness */
+  border-radius: 5px;
+  appearance: none;
+  background-color: #ffffff;
+  /* Changed to white for a cleaner look */
+  color: #333333;
+  /* Dark text for better readability */
+}
+
+.student-selector:focus {
+  border-color: #1e6ba8;
+  /* Darker blue on focus */
+  outline: none;
+}
+
+.button-container {
+  text-align: right;
+}
+
+/* The end of the assess page styling */
+
+/* The skills page to add the skill */
+
+.delete-cell {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-icon {
+  color: red;
+  /* Red color for the "X" mark */
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.card-container-add-skill {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.add-skill-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Add by Button */
+.add-by-modal,
+#add-skill-button,
+#add-assessment-button,
+#assessment-modal-button {
+  background-color: #3498db;
+  /* Updated to a blue color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Common styles for both buttons */
+/* Common styles for both buttons */
+#modal-invite-button,
+#create-group-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+/* Specific style for the Invite button */
+/* Common styles for both buttons */
+#modal-invite-button,
+#create-group-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+.group-member:hover {
+  background-color: #e0e0e0;
+  /* Slightly darker grey for group leaders */
+  cursor: pointer;
+  /* Changes the cursor to a pointer to indicate it's interactive */
+}
+
+/* Specific style for the Invite button */
+#modal-invite-button {
+  background-color: #daa520;
+  /* Goldenrod */
+  color: white;
+}
+
+#modal-invite-button:hover {
+  background-color: #b8860b;
+  /* Dark Goldenrod */
+}
+
+/* Specific style for the Create Group button */
+#create-group-button {
+  background-color: #4682b4;
+  /* Steel Blue */
+  color: white;
+}
+
+#create-group-button:hover {
+  background-color: #5f9ea0;
+  /* Cadet Blue */
+}
+
+.add-by-modal:hover,
+#add-skill-button:hover,
+#add-assessment-button:hover,
+#assessment-modal-button:hover {
+  background-color: white;
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+
+/* Table */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 20px 15px;
+  /* Increased padding for a bigger table box */
+}
+
+.skills-table tbody {
+  border-bottom: 2px solid #3498db;
+  /* Updated to a blue color */
+}
+
+.skills-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.skills-table tbody tr:last-of-type {
+  border-bottom: 2px solid #3498db;
+  /* Updated to a blue color */
+}
+
+/* You can include the previous styles and add/modify the following styles */
+
+/* The Responsivness of the dashboard */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0px;
+    height: 100vh;
+    padding-right: 60px;
+  }
+
+  .sidebar:hover {
+    width: 60px;
+    /* Keep it the same to avoid accidental expansion on touch devices */
+  }
+
+  .main li {
+    padding-right: 35px;
+  }
+
+  .main a span {
+    display: none;
+    /* Hide text to save space */
+  }
+
+  .main a i {
+    margin-right: 0;
+    /* Remove margin to align icons */
+  }
+
+  .buttons-container-courses .big-button {
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+
+  .user-info {
+    gap: 0.5rem;
+  }
+
+  .search-box {
+    gap: 0.5rem;
+  }
+
+  .search-box input {
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .bargraph {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
+  .big-button {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .group-container,
+  .available-container {
+    padding: 3px;
+  }
+
+  th,
+  .table-container td {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* @media (max-width: 425px) {
+  .sidebar {
+    width: 0px;
+    height: 125vh;
+    position: fixed;
+  }
+  } */
+/* Add additional class for toggled state */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed .main a span {
+  display: none;
+}
+
+.sidebar.collapsed .main a i {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .show_medium {
+    display: block;
+    padding: 1% 0%;
+    margin-bottom: 1%;
+  }
+
+  .show_medium ul li a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .center_medium {
+    text-align: center;
+  }
+
+  .center_medium h2 {
+    font-size: 25px;
+  }
+
+  .show_desktop {
+    display: none;
+  }
+
+  .logo {
+    font-size: 24px;
+    padding-left: 20px;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main DashBoard</title>
+  <link rel="stylesheet" href="/front/styles/css/dashboards.css" />
+  <link rel="stylesheet" href="/front/styles/css/styles.css" />
+  <script src="/scripts/kitfontaweson.js"></script>
+</head>
+
+<!-- The main content is here-->
+
+<body>
+  <div class="sidebar show_desktop">
+    <div class="logo"></div>
+    <ul class="main">
+      <li class="choosen">
+        <a href="mainadmin">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <span>Classes</span>
+        </a>
+      </li>
+      <li>
+        <a href="ratingskills">
+          <i class="fa-solid fa-percent"></i>
+          <span>Rating Skills</span>
+        </a>
+      </li>
+      <li>
+        <a href="assessment">
+          <i class="fa-solid fa-percent"></i>
+          <span>Assessment</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <header class="show_medium">
+      <div class="row">
+        <div class="col-12 col-md-9 text-center pt-2">
+          <a class="logo" href="landing">Enhanced Academic Experience</a>
+        </div>
+        <div class="col-12 col-md-auto text-end">
+          <div class="dropdown me-2 mt-2">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li class="choosen">
+                <a href="mainadmin">
+                  <i class="fa-solid fa-square-poll-vertical px-2"></i>
+                  <span>Classes</span>
+                </a>
+              </li>
+              <li>
+                <a href="ratingskills">
+                  <i class="fa-solid fa-percent px-2"></i>
+                  <span>Rating Skills</span>
+                </a>
+              </li>
+              <li>
+                <a href="assessment">
+                  <i class="fa-solid fa-percent px-2"></i>
+                  <span>Assessment</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-container">
+      <div class="header-title">
+        <span>Admin</span>
+        <h2>Dashboard</h2>
+      </div>
+      <div class="header-right">
+        <div class="welcome-message">
+          <p>Welcome, <span id="name"></span></p>
+        </div>
+        <div class="user-info">
+          <img src="/front/styles/images/Profilepicture.jpg" alt="The profile picture of the user" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container center_medium">
+      <div class="category">
+        <h2>Software Engineering</h2>
+        <div class="class-buttons">
+          <button class="custom-button">Class 18</button>
+          <button class="custom-button">Class 19</button>
+          <button class="custom-button">Class 20</button>
+          <button class="custom-button">Class 21</button>
+          <button class="custom-button">Class 22</button>
+        </div>
+      </div>
+
+      <div class="category">
+        <h2>Computer Science</h2>
+        <div class="class-buttons">
+          <button class="custom-button">Class 18</button>
+          <button class="custom-button">Class 19</button>
+          <button class="custom-button">Class 20</button>
+          <button class="custom-button">Class 21</button>
+          <button class="custom-button">Class 20</button>
+        </div>
+      </div>
+
+      <div class="category">
+        <h2>Computer Engineering & networks</h2>
+        <div class="class-buttons">
+          <button class="custom-button">Class 18</button>
+          <button class="custom-button">Class 19</button>
+          <button class="custom-button">Class 20</button>
+          <button class="custom-button">Class 21</button>
+          <button class="custom-button">Class 22</button>
+        </div>
+      </div>
+
+      <div class="category">
+        <h2>CyberSecuirty</h2>
+        <div class="class-buttons">
+          <button class="custom-button">Class 18</button>
+          <button class="custom-button">Class 19</button>
+          <button class="custom-button">Class 20</button>
+          <button class="custom-button">Class 21</button>
+          <button class="custom-button">Class 22</button>
+        </div>
+      </div>
+
+      <div class="button-container text-end">
+        <button class="asses-button" onclick="window.location.href='/admin/ratingskills'">Next</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="/scripts/bootstrap.bundle.min.js"></script>
+  <script src="/scripts/index.js"></script>
+  <script src="/scripts/mainadmin.js"></script>
+</body>
+
+</html>

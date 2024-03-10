@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('/front/styles/css/bootstrap.min.css');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+.deleteBtn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+body {
+  background: linear-gradient(to right, #0d2238, #007bb5);
+
+  /* background: linear-gradient(to right, #0a1f3d, #006494); */
+
+  /* background: linear-gradient(to right, #0a1f3d, #0a1429); */
+
+  /* background: linear-gradient(to right, #0d2238, #0a1627); */
+
+  /* background: linear-gradient(to right, #1e3c72, #12204a); */
+}
+
+/* The landing page css  */
+
+/* The navbar  */
+
+.logo {
+  color: #30c5c7;
+  /* color: #4a90e2; */
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.logo:hover {
+  color: #e94e77;
+  transition: color 0.3s ease;
+}
+
+li,
+a,
+button {
+  font-size: 1.2rem;
+  color: #edf0f1;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10%;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.show_medium {
+  display: none;
+}
+
+.contact-list {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.contact-list:hover:after {
+  content: "Let's talk!";
+  position: absolute;
+  color: #fff;
+  margin-left: 1rem;
+
+
+}
+
+
+
+
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0 1.4rem;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #e94e77;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.login-button,
+.signup-button {
+  padding: 0.7rem 1.5rem;
+  background-color: #4a90e2;
+  color: #fafafa;
+  border: none;
+  cursor: pointer;
+  border-radius: 3rem;
+  margin-right: 1rem;
+  transition: all 0.3s ease-out;
+}
+
+.signup-button {
+  background-color: #e94e77;
+  color: #fafafa;
+}
+
+.login-button:hover {
+  background-color: #3a76b8;
+  transform: scale(1.05);
+}
+
+.signup-button:hover {
+  background-color: #d73a61;
+  transform: scale(1.05);
+}
+
+/* The main content of the page  */
+.itemm {
+  filter: blur(4px);
+}
+.main-content,
+.main-content-about {
+  padding: 3rem;
+  text-align: center;
+  width: 65%;
+  margin: auto;
+  background: rgba(13, 34, 56, 0.8);
+  border-radius: 0.8rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+  transform: translateY(5vh);
+  color: #edf0f1;
+  cursor: pointer;
+}
+
+.main-content h1,
+.main-content-about h1 {
+  color: #e94e77;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-content p,
+.main-content-about p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.getstarted-button {
+  padding: 0.3rem 1rem;
+  background-color: #e94e77;
+  color: #fafafa;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  transition: all 0.3 ease-out;
+}
+
+.getstarted-button:hover {
+  background-color: #d73a61;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* features section of the landing page */
+
+.features-section {
+  width: 100%;
+  height: 60vh;
+  padding: 0 15%;
+  transform: translateY(3vh);
+  color: white;
+}
+
+.features-section h2 {
+  color: #e94e77;
+  padding-top: 10%;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+}
+
+.features-section h2::after {
+  content: "";
+  background-color: white;
+  width: 6rem;
+  height: 0.3rem;
+  position: absolute;
+  bottom: -0.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.service {
+  text-align: center;
+  flex: 1;
+  padding: 1.7rem 0.7rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+.service i {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+  color: hsl(200, 100%, 70%);
+}
+
+.service h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service:hover {
+  color: hsl(200, 100%, 75%);
+  transform: scale(1.05);
+}
+
+/* The login and sign up page CSS */
+
+.signup-container,
+.login-container,
+.contact-container {
+  width: 400px;
+  padding: 2rem 1rem;
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 0.8rem;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.signup-title,
+.login-title,
+.contact-title {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 1.4rem;
+}
+
+.signup-form input,
+.login-form input,
+.contact-container input,
+.contact-container .contact-message {
+  outline: none;
+  width: 92%;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  margin-bottom: 0.8rem;
+  border-radius: 20px;
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+/* The drop down list styling */
+
+.signup-form input,
+.signup-form select {
+  outline: none;
+  width: 100%;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  margin-bottom: 0.8rem;
+  border-radius: 20px;
+  background-color: #e4e4e4;
+  cursor: pointer;
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the element's total width and height */
+  font-size: 1em;
+  /* Ensures consistent font size */
+  appearance: none;
+}
+
+/* Styling the options inside the dropdown */
+.signup-form option {
+  padding: 0.5em;
+  /* Reduced padding for options */
+  background-color: #e4e4e4;
+}
+
+.signup-page,
+.login-page {
+  margin-top: 1.4rem;
+}
+
+.terms input {
+  height: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.terms label {
+  font-size: 0.7rem;
+}
+
+.terms a {
+  color: rgb(17, 107, 143);
+}
+
+.member {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: black;
+}
+
+.member-login {
+  color: rgb(17, 107, 143);
+  text-decoration: none;
+}
+
+.notmember {
+  color: #e94e77;
+  text-decoration: none;
+}
+
+/* about us page */
+
+.main-content-about {
+  margin-bottom: 8rem;
+}
+
+.subtitle-about {
+  color: #e94e77;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+}
+
+.contact-message {
+  resize: none;
+}
+
+.menu-icon {
+  display: none;
+  /* Hide the menu icon by default */
+  cursor: pointer;
+}
+
+/* Responsiveness  */
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .main-content-about {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main-content-about {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-content-about {
+    margin-top: 10rem;
+  }
+}
+
+/* ... Your existing CSS code ... */
+
+/* Responsive Styles */
+/* ... Your existing CSS code ... */
+
+/* Responsive Styles */
+/* ... Your existing CSS code ... */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .show_medium {
+    display: block;
+    padding: 5% 0%;
+    margin-bottom: 25px;
+  }
+
+  .show_desktop {
+    display: none;
+  }
+
+  .logo {
+    font-size: 24px;
+    padding-left: 20px;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Styles for small screens */
+  .main-content,
+  .main-content-about,
+  .signup-container,
+  .login-container,
+  .contact-container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .main-content-about {
+    margin-top: 29rem;
+    margin-bottom: 8rem;
+  }
+
+  .nav-links li {
+    padding: 0 1rem;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .signup-button,
+  .login-button,
+  .getstarted-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .features-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .features-section h2::after {
+    width: 4rem;
+    bottom: -0.5rem;
+  }
+
+  .menu-icon {
+    display: block;
+    /* Display the menu icon for small screens */
+  }
+
+  .nav-links {
+    display: none;
+    /* Hide navigation links by default on small screens */
+    background-color: #0d2238;
+    position: absolute;
+    top: 80px;
+    /* Adjust the top position to align with your header */
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li {
+    display: block;
+    padding: 1rem 0;
+  }
+
+  .nav-links li a {
+    color: #edf0f1;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .nav-links.show {
+    display: block;
+    /* Display the navigation links when the class 'show' is added */
+  }
+}
+
+
+circle-progress {
+	stroke-linecap: round;
+}
+ 
+
+/* ... Your existing CSS code ... */
+
+/* ... Your existing CSS code ... */
+
+/* Add more responsive styles as needed */

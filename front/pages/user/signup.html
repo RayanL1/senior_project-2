@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignUp</title>
+  <link rel="stylesheet" href="/front/styles/css/styles.css" />
+  <script src="/scripts/kitfontaweson.js"></script>
+</head>
+<!-- The main content is here-->
+
+<body>
+  <header class="header show_desktop">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-6 col-lg-5 col-md-12">
+          <a class="logo" href="landing">Enhanced Academic Experience</a>
+        </div>
+        <div class="col-6 col-xl-2 col-lg-4 col-md-6">
+          <a href="contactus" class="contact-list">Contact Us</a>
+        </div>
+        <div class="col-6 col-xl-4 col-lg-3 col-md-6">
+          <a href="login"><button class="login-button">Login</button></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar for mobile Start -->
+  <header class="show_medium">
+    <div class="row ">
+      <div class="col-12 col-md-9 text-center  pt-2">
+        <a class="logo" href="landing">Enhanced Academic Experience</a>
+      </div>
+      <div class="col-12 col-md-auto text-end">
+        <div class="dropdown pe-4 pt-2">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="contactus">Contact Us</a></li>
+            <li><a class="dropdown-item" href="login">Login</a></li>
+            <li><a class="dropdown-item" href="signup">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- mobile End -->
+
+  <div class="signup-container">
+    <h1 class="signup-title">Sign Up</h1>
+    <div class="signup-form">
+      <form action="#" method="post" id="signup-form">
+        <input type="email" id="email" placeholder="University email" pattern="^\d{7}@uj\.edu\.sa$" required />
+        <input type="text" id="username" placeholder="Name" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="password" id="repassword" placeholder="Re-Enter Password" required />
+
+        <select id="major" name="major" required>
+          <option value="" disabled selected>Select your major</option>
+
+          <option class="major" value="Computer Science">Computer Science</option>
+          <option class="major" value="Software Engineering">Software Engineering</option>
+          <option class="major" value="CyberSecuirty">CyberSecuirty</option>
+          <option class="major" value="Computer Engineering">Computer Engineering </option>
+        </select>
+
+        <select id="class" name="class" required>
+          <option value="" disabled selected>Select your class</option>
+
+          <option class="class-number">Class 18</option>
+          <option class="class-number">Class 19</option>
+          <option class="class-number">Class 20</option>
+          <option class="class-number">Class 21</option>
+          <option class="class-number">Class 22</option>
+
+        </select>
+
+        <button type="submit" id="signup" class="signup-button signup-page">Sign Up</button>
+      </form>
+      <div class="member">
+        Already a member? <a href="login" class="member-login"> Login</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/scripts/bootstrap.bundle.min.js"></script>
+<script src="/scripts/index.js"></script>
+  <script src="/scripts/signup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/front/styles/css/dashboards.css" />
+  <link rel="stylesheet" href="/front/styles/css/styles.css" />
+  <script src="/scripts/kitfontaweson.js"></script>
+  <script src="scripts/script.js" defer></script>
+</head>
+
+<!-- The main content is here-->
+
+<body>
+  <div class="sidebar show_desktop">
+    <div class="logo"></div>
+    <ul class="main">
+      <li>
+        <a href="dashboard">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <span>Statistics</span>
+        </a>
+      </li>
+      <li class="choosen">
+        <a href="portfolio">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Portfolio</span>
+        </a>
+      </li>
+      <li >
+        <a href="portfoliobuilder">
+          <i class="fa-brands fa-stack-exchange"></i>
+          <span>Portfolio builder</span>
+        </a>
+      </li>
+      <li>
+        <a href="group">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Group</span>
+        </a>
+      </li>
+      <li>
+        <a href="course">
+          <i class="fa-solid fa-bars"></i>
+          <span>Course Group</span>
+        </a>
+      </li>
+      <li class="logout">
+        <a href="javascript:void(0)" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <header class="show_medium">
+      <div class="row">
+        <div class="col-12 col-md-9 text-center pt-2">
+          <a class="logo" href="landing">Enhanced Academic Experience</a>
+        </div>
+        <div class="col-12 col-md-auto text-end">
+          <div class="dropdown me-2 mt-2">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a href="dashboard">
+                  <i class="fa-solid fa-square-poll-vertical px-2"></i>
+                  <span>Statistics</span>
+                </a>
+              </li>
+              <li class="choosen">
+                <a href="portfolio">
+                  <i class="fa-solid fa-briefcase px-2"></i>
+                  <span>Portfolio</span>
+                </a>
+              </li>
+              <li >
+                <a href="portfoliobuilder">
+                  <i class="fa-brands fa-stack-exchange px-2"></i>
+                  <span>Portfolio Builder</span>
+                </a>
+              </li>
+              <li>
+                <a href="group">
+                  <i class="fa-solid fa-user-group px-2"></i>
+                  <span>Group</span>
+                </a>
+              </li>
+              <li>
+                <a href="course">
+                  <i class="fa-solid fa-bars px-2"></i>
+                  <span>Course Group</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" onclick="logout()">
+                  <i class="fa-solid fa-right-from-bracket px-2"></i>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-container">
+      <div class="header-title">
+        <span>Enhanced</span>
+        <h2>Dashboard</h2>
+      </div>
+      <div class="header-right">
+        <div class="welcome-message">
+          <p>Welcome, <span id="username"></span></p>
+        </div>
+        <div class="user-info">
+          <img id="avatar" src="/front/styles/images/Profilepicture.jpg" alt="The profile picture of the user" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container center_medium">
+      <div class="container p-5">
+        <div class="row pb-1 g-3">
+          <div class="col-12 col-xl-6 col-lg-6 pt-2">
+            <div class="content-text">
+              
+             <p><span class="text-primary">Hi There, </span>
+              <span id="about" class="text-capitalize text-primary"></span> </p>
+              <h1 id="name"></h1>
+              <p id="major" class="major">Major: </p>
+              <p class="email">
+                Email:
+                <a href="mailto:" id="email"></a>
+              </p>
+              <div class="social-media"></div>
+
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 pt-2">
+            <div class="portfolio-header">
+              <img id="icon" src="/front/styles/images/Profilepicture.jpg" alt="Personal Picture " height="20px" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <!-- Skills start -->
+        <div class="row pb-1 g-3">
+          <div class="col-12 pt-2">
+            <div class="skills">
+              <div class="portfolio-container">
+                <h2><i class="fa-solid fa-laptop-code"></i> Skills</h2>
+                <hr />
+                <div class="skills-content">
+                  <div class="row">
+                    <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                      <div class="item itemm" id="html">
+                        <img src="/front/styles/images/HTML.png" alt="HTML">
+                        <p>HTML</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                      <div class="item itemm" id="css">
+                        <img src="/front/styles/images/CSS.webp" alt="CSS">
+                        <p>CSS</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                      <div class="item itemm" id="js">
+                        <img src="/front/styles/images/JavaScript.png" alt="JavaScript">
+                        <p>JavaScript</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                      <div class="item itemm" id="node.js">
+                        <img src="/front/styles/images/Nodejs.png" alt="Node Js">
+                        <p>Node Js</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                      <div class="item itemm" id="java">
+                        <img src="/front/styles/images/Java.png" alt="Java Language">
+                        <p>Java</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                      <div class="item itemm" id="react">
+                        <img src="/front/styles/images/React Js.png" alt="React Js">
+                        <p>React Js</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                      <div class="item itemm" id="sql">
+                        <img src="/front/styles/images/MySql.svg" alt="My Sql">
+                        <p>My Sql</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                      <div class="item itemm" id="ruby">
+                        <img src="/front/styles/images/Ruby.png" alt="Ruby Language">
+                        <p>Ruby</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Skills end -->
+
+        <!-- Assessment results start here -->
+        <div class="row pb-1 g-3">
+          <div class="col-12 pt-2">
+            <div class="assessment-results">
+              <h2>Assessment Results</h2>
+              <div class="results-content">
+                <div class="item">
+                  <h3>Coding</h3>
+                  <div class="bar">
+                    <div class="percentage" id="coding" style="width: 0%">0%</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3>Design</h3>
+                  <div class="bar">
+                    <div class="percentage" id="design" style="width: 0%">0%</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3>Analysis</h3>
+                  <div class="bar">
+                    <div class="percentage" id="analysis" style="width: 0%">0%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Assessment results end here -->
+
+        <!-- Portfolio start -->
+
+        <div class="row pb-1 g-3">
+          <div class="col-12">
+            <section class="portfolio">
+              <div class="container">
+                <h2><i class="fa-solid fa-laptop-code"></i>My Projects</h2>
+              </div>
+              <div id="projects" class="row g-3">
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- Portfolio end -->
+        <!-- Certification start -->
+        <div class="row pb-1 g-3">
+          <div class="col-12">
+            <section class="portfolio-certification">
+              <div class="container">
+                <h2>
+                  <i class="fa-solid fa-book"></i> My Certifications
+                </h2>
+              </div>
+              <div id="certificates" class="row g-3">
+
+
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- Certification end -->
+      </div>
+    </div>
+  </div>
+  <script src="/scripts/bootstrap.bundle.min.js"></script>
+  <script src="/scripts/index.js"></script>
+  <script src="/scripts/portfolio.js"></script>
+</body>
+
+</html>

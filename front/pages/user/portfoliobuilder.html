@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Builder</title>
+  <link rel="stylesheet" href="/front/styles/css/dashboards.css" />
+  <link rel="stylesheet" href="/front/styles/css/styles.css" />
+  <script src="/scripts/kitfontaweson.js"></script>
+  <script src="scripts/script.js" defer></script>
+</head>
+
+<!-- The main content is here-->
+
+<body>
+  <div class="sidebar show_desktop">
+    <div class="logo"></div>
+    <ul class="main">
+      <li>
+        <a href="dashboard">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <span>Statistics</span>
+        </a>
+      </li>
+      <li>
+        <a href="portfolio">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Portfolio</span>
+        </a>
+      </li>
+      <li class="choosen">
+        <a href="portfoliobuilder">
+          <i class="fa-brands fa-stack-exchange"></i>
+          <span>Portfolio builder</span>
+        </a>
+      </li>
+      <li>
+        <a href="group">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Group</span>
+        </a>
+      </li>
+      <li>
+        <a href="course">
+          <i class="fa-solid fa-bars"></i>
+          <span>Course Group</span>
+        </a>
+      </li>
+      <li class="logout">
+        <a href="javascript:void(0)" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <header class="show_medium">
+      <div class="row">
+        <div class="col-12 col-md-9 text-center pt-2">
+          <a class="logo" href="landing">Enhanced Academic Experience</a>
+        </div>
+        <div class="col-12 col-md-auto text-end">
+          <div class="dropdown me-2 mt-2">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a href="dashboard">
+                  <i class="fa-solid fa-square-poll-vertical px-2"></i>
+                  <span>Statistics</span>
+                </a>
+              </li>
+              <li>
+                <a href="portfolio">
+                  <i class="fa-solid fa-briefcase px-2"></i>
+                  <span>Portfolio</span>
+                </a>
+              </li>
+              <li class="choosen">
+                <a href="portfoliobuilder">
+                  <i class="fa-brands fa-stack-exchange px-2"></i>
+                  <span>Portfolio Builder</span>
+                </a>
+              </li>
+              <li>
+                <a href="group">
+                  <i class="fa-solid fa-user-group px-2"></i>
+                  <span>Group</span>
+                </a>
+              </li>
+              <li>
+                <a href="course">
+                  <i class="fa-solid fa-bars px-2"></i>
+                  <span>Course Group</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" onclick="logout()">
+                  <i class="fa-solid fa-right-from-bracket px-2"></i>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-container">
+      <div class="header-title">
+        <span>Enhanced</span>
+        <h2>Dashboard</h2>
+      </div>
+      <div class="header-right">
+        <div class="welcome-message">
+          <p>Welcome, <span id="name"></span></p>
+        </div>
+        <div class="user-info">
+          <img id="avatar" src="/front/styles/images/Profilepicture.jpg" alt="The profile picture of the user" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container center_medium">
+      <div class="container buttons-container">
+        <div class="row g-3">
+          <div class="col-xl-4 col-lg-6 col-md-12">
+            <button class="big-button personal-data" id="personalInfoButton">
+              Personal Information
+            </button>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-12">
+            <button class="big-button upload-projects" id="projectInfoButton">
+              Upload Project
+            </button>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-12">
+            <button class="big-button upload-projects" id="addSkills" onclick="window.location.href = '/skills'">
+              Add skills
+            </button>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-12">
+            <button class="big-button upload-projects d-none"> </button>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-12">
+            <button class="big-button upload-certificates">
+              Upload Certificates
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="personalInfoModal" class="personal-information-modal">
+        <div class="modal-content">
+          <span id="close-personalinfo-modal">&times;</span>
+          <h2 class="personal-information-header">Personal Information</h2>
+          <form onsubmit="return false;" method="post">
+            <!-- <label for="name">Name:</label><br /> -->
+            <input class="personal-information-input" type="text" id="personal-name" name="name" placeholder="Name"
+              required /><br />
+            <!-- <label for="title">Title:</label><br /> -->
+            <input class="personal-information-input" type="text" id="personal-about" name="title"
+              placeholder="about" /> <br />
+            <!-- <label for="major">Major:</label><br /> -->
+            <select class="personal-information-input" name="major" id="personal-major" placeholder="Major" required>
+              <option value="Software Engineering">Software Engineering</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Computer Engineering & networks">Computer Engineering & networks</option>
+              <option value="CyberSecuirty">CyberSecuirty</option>
+            </select>
+            <br />
+            <!-- <label for="email">Email:</label><br /> -->
+            <input class="personal-information-input " type="email" id="personal-email" name="email" placeholder="email"
+              required /><br />
+            <input class="any-information-input" type="file" accept="image/*" id="profile-file" name="file"
+              placeholder="profile image" required /><br />
+
+            <input type="submit" id="SubmitPersonal" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <div id="projectInfoModal" class="any-information-modal anyModal">
+        <div class="modal-content">
+          <span id="close-any-modal">&times;</span>
+          <h2 class="personal-information-header">Project Information</h2>
+          <form method="post" onsubmit="return false;">
+            <!-- <label for="name">Name:</label><br /> -->
+            <input class="any-information-input" type="text" id="project-name" name="name" placeholder="Name"
+              required /><br />
+            <!-- <label for="title">Title:</label><br /> -->
+            <input class="any-information-input" type="text" id="project-desc" name="title"
+              placeholder="desc For Project" required /><br />
+            <input class="any-information-input" type="file" accept="image/*" id="project-file" name="file"
+              placeholder="image For Project" required /><br />
+            <!-- <label for="major">Major:</label><br /> -->
+            <input type="submit" id="SubmitProject" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <div id="certificatesInfoModal" class="any-information-modal anyModal">
+        <div class="modal-content">
+          <span id="close-certificates-modal">&times;</span>
+          <h2 class="personal-information-header">Certificates Information</h2>
+          <form method="post" onsubmit="return false;">
+            <!-- <label for="name">Name:</label><br /> -->
+            <input class="any-information-input" type="text" id="certificates-name" name="name" placeholder="Name"
+              required /><br />
+            <!-- <label for="title">Title:</label><br /> -->
+            <input class="any-information-input" type="text" id="certificates-desc" name="title"
+              placeholder="desc For Project" required /><br />
+            <input class="any-information-input" type="file" accept="image/*" id="certificates-file" name="file"
+              placeholder="image For Project" required /><br />
+            <!-- <label for="major">Major:</label><br /> -->
+            <input type="submit" id="SubmitcertificatesInfoModal" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/scripts/bootstrap.bundle.min.js"></script>
+  <script src="/scripts/index.js"></script>
+  <script src="/scripts/builder.js"></script>
+</body>
+
+</html>

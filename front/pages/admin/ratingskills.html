@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rating Skills</title>
+
+  <link rel="stylesheet" href="/front/styles/css/dashboards.css" />
+  <link rel="stylesheet" href="/front/styles/css/styles.css" />
+  <script src="/scripts/kitfontaweson.js"></script>
+
+</head>
+<!-- The main content is here-->
+
+<body>
+  <div class="sidebar show_desktop">
+    <div class="logo"></div>
+    <ul class="main">
+     
+      <li>
+        <a href="mainadmin">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <span>Classes</span>
+        </a>
+      </li>
+      <li class="choosen">
+        <a href="ratingskills">
+          <i class="fa-solid fa-percent"></i>
+          <span>Rating Skills</span>
+        </a>
+      </li>
+      <li >
+        <a href="assessment">
+          <i class="fa-solid fa-percent"></i>
+          <span>Assessment</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="javascript:void(0)" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <header class="show_medium">
+      <div class="row">
+        <div class="col-12 col-md-9 text-center pt-2">
+          <a class="logo" href="landing">Enhanced Academic Experience</a>
+        </div>
+        <div class="col-12 col-md-auto text-end">
+          <div class="dropdown me-2 mt-2">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a href="mainadmin">
+                  <i class="fa-solid fa-square-poll-vertical px-2"></i>
+                  <span>Classes</span>
+                </a>
+              </li>
+              <li>
+                <a class="choosen" href="ratingskills">
+                  <i class="fa-solid fa-percent px-2"></i>
+                  <span>Asses</span>
+                </a>
+              </li>
+              <li >
+                <a href="assessment">
+                  <i class="fa-solid fa-percent px-2"></i>
+                  <span>Assessment</span>
+                </a>
+              </li>
+              <li>
+                <a href="skills">
+                  <i class="fa-solid fa-paperclip px-2"></i>
+                  <span>Skills</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-container">
+      <div class="header-title">
+        <span>Admin</span>
+        <h2>Dashboard</h2>
+      </div>
+      <div class="header-right">
+        <div class="welcome-message">
+          <p>Welcome, <span id="name"></span></p>
+        </div>
+        <div class="user-info">
+          <img src="/front/styles/images/Profilepicture.jpg" alt="The profile picture of the user" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container center_medium">
+      <div class="row pb-1">
+        <div class="col-12">
+          <div class="card-container-asses">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="your-group-title">Software Engineering 20</h2>
+              </div>
+              <div class="col-12">
+                <div class="selector-container">
+                  <label for="students" class="selector-label">Choose a student:</label>
+                  <select id="students" name="students" class="student-selector">
+                    <option value="none">Choice student</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="table-container group-container mb-0">
+                  <table class="assessment-table">
+                    <thead>
+                      <tr>
+                        <th>Skill name</th>
+                        <th><i class="fa-solid fa-star"></i>skills</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="group-leader">
+                        <td>Analysis</td>
+                        <td>
+                          <input class="asess-input" type="number" placeholder="100%" id="analysis"  min="1" max="100" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Coding</td>
+                        <td>
+                          <input class="asess-input" type="number" placeholder="100%" id="coding"  min="1" max="100" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Design</td>
+                        <td>
+                          <input class="asess-input" type="number" placeholder="100%" id="design"   min="1" max="100"/>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="button-container text-end">
+                <button id="addToResults" class="asses-button">Add To Results</button>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="table-container ">
+                <div class="row">
+                  <div class="col-12">
+                    <h2 class="result-header-table">Results</h2>
+                  </div>
+                  <div class="col-12">
+                    <table class="results-table">
+                      <thead>
+                        <tr>
+                          <th>Student Name</th>
+                          <th>Student ID</th>
+                          <th>Analysis</th>
+                          <th>Coding</th>
+                          <th>Design</th>
+                        </tr>
+                      </thead>
+                      <tbody id="results">
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="button-container text-end">
+                <button id="send-data" class="asses-button">Send Results</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/scripts/bootstrap.bundle.min.js"></script>
+  <script src="/scripts/index.js"></script>
+  <script src="/scripts/ratingskills.js"></script>
+</body>
+
+</html>

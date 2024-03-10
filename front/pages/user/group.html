@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group</title>
+  <link rel="stylesheet" href="/front/styles/css/dashboards.css" />
+  <link rel="stylesheet" href="/front/styles/css/styles.css" />
+  <script src="/scripts/kitfontaweson.js"></script>
+</head>
+
+
+
+
+<!-- The main content is here-->
+
+<body>
+
+  <div class="sidebar show_desktop">
+    <div class="logo"></div>
+    <ul class="main">
+      <li>
+        <a href="dashboard">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <span>Statistics</span>
+        </a>
+      </li>
+      <li>
+        <a href="portfolio">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Portfolio</span>
+        </a>
+      </li>
+      <li>
+        <a href="portfoliobuilder">
+          <i class="fa-brands fa-stack-exchange"></i>
+          <span>Portfolio builder</span>
+        </a>
+      </li>
+      <li class="choosen">
+        <a href="group">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Group</span>
+        </a>
+      </li>
+      <li>
+        <a href="course">
+          <i class="fa-solid fa-bars"></i>
+          <span>Course Group</span>
+        </a>
+      </li>
+
+      <li class="logout">
+        <a href="javascript:void(0)" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <header class="show_medium">
+      <div class="row">
+        <div class="col-12 col-md-9 text-center pt-2">
+          <a class="logo" href="landing">Enhanced Academic Experience</a>
+        </div>
+        <div class="col-12 col-md-auto text-end">
+          <div class="dropdown me-2 mt-2">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a href="dashboard">
+                  <i class="fa-solid fa-square-poll-vertical px-2"></i>
+                  <span>Statistics</span>
+                </a>
+              </li>
+              <li>
+                <a href="portfolio">
+                  <i class="fa-solid fa-briefcase px-2"></i>
+                  <span>Portfolio</span>
+                </a>
+              </li>
+              <li>
+                <a href="portfoliobuilder">
+                  <i class="fa-brands fa-stack-exchange px-2"></i>
+                  <span>Portfolio Builder</span>
+                </a>
+              </li>
+              <li class="choosen">
+                <a href="group">
+                  <i class="fa-solid fa-user-group px-2"></i>
+                  <span>Group</span>
+                </a>
+              </li>
+              <li>
+                <a href="course">
+                  <i class="fa-solid fa-bars px-2"></i>
+                  <span>Course Group</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" onclick="logout()">
+                  <i class="fa-solid fa-right-from-bracket px-2"></i>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-container">
+      <div class="header-title">
+        <span>Enhanced</span>
+        <h2>Dashboard</h2>
+      </div>
+      <div class="header-right">
+        <div class="welcome-message">
+          <p>Welcome, <span id="name"></span></p>
+        </div>
+        <div class="user-info">
+          <img id="avatar" src="/front/styles/images/Profilepicture.jpg" alt="The profile picture of the user" />
+        </div>
+      </div>
+    </div>
+
+    <div id="create-group-modal">
+      <div class="modal-content">
+        <span id="create-group-close-modal">&times;</span>
+        <h3 class="modal-header">Create a group</h3>
+        <div id="modal-Form">
+          <label for="modal-form-name">Group Name</label>
+          <input type="text" id="modal-form-name" name="modal-form-name" required />
+
+          <label for="max-members">Maximum members</label>
+          <input type="text" id="max-members" name="max-members" required />
+
+          <button type="submit" id="group-modal-submit">Create</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-invite">
+      <div id="modal-content-invite">
+        <span id="close-invite">&times;</span>
+
+        <div class="invite-container">
+          <h2 class="invite-header">Course Group Invitations</h2>
+          <div class="invite-card">
+            <p>
+              Ali has invited you to join the "Software Testing & Validation"
+              Group Course.
+            </p>
+            <div class="actions">
+              <button class="accept-btn">Accept</button>
+              <button class="decline-btn">Decline</button>
+            </div>
+          </div>
+
+          <div class="invite-card">
+            <p>
+              Mohammed has invited you to join the "Cloud Computing" Group
+              Course.
+            </p>
+            <div class="actions">
+              <button class="accept-btn">Accept</button>
+              <button class="decline-btn">Decline</button>
+            </div>
+          </div>
+
+          <div class="invite-card">
+            <p>
+              Faisal has requested to join your "Cloud Computing" Group
+              Course.
+            </p>
+            <div class="actions">
+              <button class="accept-btn">Accept</button>
+              <button class="decline-btn">Decline</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container your-group center_medium">
+      <div class="col-12">
+        <div class="selector-container">
+          <label for="courses" class="selector-label">Choose a course:</label>
+          <select id="courses" name="courses" class="student-selector">
+            <option value="none">Choice course</option>
+            <option value="Software Testing & Validation"> Software Testing & Validation</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="Advance Topics on Software Engineering">Advance Topics on Software Engineering</option>
+            <option value="Software Construction">Software Construction</option>
+            <option value="User Experience">User Experience</option>
+
+          </select>
+        </div>
+      </div>
+      <h2 class="your-group-title">Your group</h2>
+      <div class="table-container group-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Group Name</th>
+              <th>Student Id</th>
+              <th>Student Name</th>
+              <th>Major</th>
+              <th><i class="fa-solid fa-star"></i>Coding</th>
+              <th><i class="fa-solid fa-star"></i>Design</th>
+              <th><i class="fa-solid fa-star"></i>Analysis</th>
+            </tr>
+          </thead>
+          <tbody id="my-group">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card-container center_medium">
+      <div class="row pb-1">
+        <div class="col-12 col-xl-3 col-lg-6 pt-2">
+          <h3 class="group-title">Members List</h3>
+        </div>
+
+        <div class="col-12 col-xl-3 col-lg-6 pt-2">
+          <button id="create-group-button">Create Group</button>
+        </div>
+
+        <div class="col col-xl-4 col-lg-9">
+          <div class="filter-buttons">
+            <button id="coding">Coding</button>
+            <button id="design">Design</button>
+            <button id="analysis">Analysis</button>
+          </div>
+        </div>
+
+        <div class="col-12 col-xl-2 col-lg-3 pt-2">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table class="available-container">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Student Id</th>
+            <th>Major</th>
+            <th><i class="fa-solid fa-star"></i>Coding</th>
+            <th><i class="fa-solid fa-star"></i>Design</th>
+            <th><i class="fa-solid fa-star"></i>Analysis</th>
+            <th>Request</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="members"></tbody>
+      </table>
+    </div>
+
+    <div class="card-container center_medium">
+      <div class="row pb-1">
+        <div class="col-12 col-xl-5 col-lg-6 pt-2">
+          <h3 class="group-title"> My Invitations</h3>
+        </div>
+      </div>
+    </div>
+    <div class="table-container">
+      <table class="invitiations-container">
+        <thead>
+          <tr>
+            <th>Inviter</th>
+            <th>Group Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="inviters"></tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  </div>
+  <script src="/scripts/bootstrap.bundle.min.js"></script>
+  <script src="/scripts/index.js"></script>
+  <script src="/scripts/group.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/front/styles/css/dashboards.css" />
+  <link rel="stylesheet" href="/front/styles/css/styles.css" />
+  <script src="/scripts/kitfontaweson.js"></script>
+</head>
+
+<!-- The main content is here-->
+
+<body>
+  <div class="sidebar show_desktop">
+    <div class="logo"></div>
+    <ul class="main">
+      <li>
+        <a href="dashboard">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <span>Statistics</span>
+        </a>
+      </li>
+      <li>
+        <a href="portfolio">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Portfolio</span>
+        </a>
+      </li>
+      <li>
+        <a href="portfoliobuilder">
+          <i class="fa-brands fa-stack-exchange"></i>
+          <span>Portfolio builder</span>
+        </a>
+      </li>
+      <li>
+        <a href="group">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Group</span>
+        </a>
+      </li>
+      <li class="choosen">
+        <a href="course">
+          <i class="fa-solid fa-bars"></i>
+          <span>Course Group</span>
+        </a>
+      </li>
+
+      <li class="logout">
+        <a href="javascript:void(0)" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <header class="show_medium">
+      <div class="row">
+        <div class="col-12 col-md-9 text-center pt-2">
+          <a class="logo" href="landing">Enhanced Academic Experience</a>
+        </div>
+        <div class="col-12 col-md-auto text-end">
+          <div class="dropdown me-2 mt-2">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a href="dashboard">
+                  <i class="fa-solid fa-square-poll-vertical px-2"></i>
+                  <span>Statistics</span>
+                </a>
+              </li>
+              <li>
+                <a href="portfolio">
+                  <i class="fa-solid fa-briefcase px-2"></i>
+                  <span>Portfolio</span>
+                </a>
+              </li>
+              <li>
+                <a href="portfoliobuilder">
+                  <i class="fa-brands fa-stack-exchange px-2"></i>
+                  <span>Portfolio Builder</span>
+                </a>
+              </li>
+              <li>
+                <a href="group">
+                  <i class="fa-solid fa-user-group px-2"></i>
+                  <span>Group</span>
+                </a>
+              </li>
+              <li class="choosen">
+                <a href="course">
+                  <i class="fa-solid fa-bars px-2"></i>
+                  <span>Course Group</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" onclick="logout()">
+                  <i class="fa-solid fa-right-from-bracket px-2"></i>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-container">
+      <div class="header-title">
+        <span>Enhanced</span>
+        <h2>Dashboard</h2>
+      </div>
+      <div class="header-right">
+        <div class="welcome-message">
+          <p>Welcome, <span id="name"></span></p>
+        </div>
+        <div class="user-info">
+          <img src="/front/styles/images/Profilepicture.jpg" alt="The profile picture of the user" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container center_medium">
+      <h1 class="courses-title">My Courses</h1>
+
+      <div class="buttons-container-courses">
+        <button class="big-button course-button">
+          Software Testing & Validation
+        </button>
+        <button class="big-button course-button">Cloud Computing</button>
+        <button class="big-button course-button">
+          Advance Topics on Software Engineering
+        </button>
+        <button class="big-button course-button">
+          Software Construction
+        </button>
+        <button class="big-button course-button">User Experience</button>
+      </div>
+    </div>
+  </div>
+  <script src="/scripts/bootstrap.bundle.min.js"></script>
+  <script src="/scripts/index.js"></script>
+</body>
+
+</html>
